@@ -81,14 +81,67 @@ void insert(node* &head, int x, int index){
     }
 }
 
+void deleteOneX(node* &head, int x){
+    if (head == NULL) return;
+    if (head -> data == x)
+    {
+        node* tmp = head;
+        head = head -> next;
+        delete tmp;
+        return;
+    }
+    node* tmp = head;
+    node* pre = NULL;
+    while (tmp != NULL && tmp -> data != x)
+    {   
+        pre = tmp;
+        tmp = tmp -> next;
+    }
+    pre -> next = tmp -> next;
+    delete tmp;
+}
+
+void deleteManyX(node* &head, int x){
+    if (head == NULL) return;
+    if (head -> data == x)
+    {
+        node* tmp = head;
+        head = head -> next;
+        delete tmp;
+    }
+    node* tmp = head;
+    node* pre = NULL;
+    while (tmp != NULL)
+    {
+        if (tmp -> data == x)
+        {
+            while (tmp -> data == x)
+            {
+                pre -> next = tmp -> next;
+                node* tmp1 = tmp;
+                tmp = tmp -> next;
+                delete tmp1;
+            }
+            
+        }
+        pre = tmp;
+        tmp = tmp -> next;
+    }
+}
+
 int main(){
     node* head = NULL;
     for (int i = 1; i <= 5; i++)
     {
         pushBack(head, i);
     }
+    for (int i = 0; i < 3; i++)
+    {
+        pushBack(head, 3);
+    }
+    pushBack(head, 4);
     duyet(head);
-    insert(head, 10, 2);
+    deleteManyX(head, 3);
     cout << endl;
     duyet(head);
     return 0;
