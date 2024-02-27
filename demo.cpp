@@ -129,20 +129,31 @@ void deleteManyX(node* &head, int x){
     }
 }
 
+void sort(node* head){
+    for (node* i = head; i != NULL; i = i -> next)
+    {
+        node* minNode = i;
+        for (node* j = i -> next; j != NULL; j = j -> next)
+        {
+            if (minNode -> data > j -> data)
+            {
+                minNode = j;
+            }
+        }
+        std:: swap(minNode -> data, i -> data);
+    }
+}
+
 int main(){
     node* head = NULL;
-    for (int i = 1; i <= 5; i++)
+    int a[10] = {10, 4, 3, 2, 6, 7, 5, 1, 9, 8};
+    for (int i = 0; i < 10; i++)
     {
-        pushBack(head, i);
+        pushBack(head, a[i]);
     }
-    for (int i = 0; i < 3; i++)
-    {
-        pushBack(head, 3);
-    }
-    pushBack(head, 4);
     duyet(head);
-    deleteManyX(head, 3);
-    cout << endl;
+    std:: cout << "\n";
+    sort(head);
     duyet(head);
     return 0;
 }
