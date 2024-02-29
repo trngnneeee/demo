@@ -67,12 +67,10 @@ double traceLuggage(int hp1, int exp1, double m1, int e2)
     }
     else
     {
-        double usedMoney = 0;
         if (hp1 < 200)
             {
                 hp1 *= 1.3;
                 m1 -= 150;
-                usedMoney += 150;
                 if (m1 == 0)
                 {
                     hp1 *= 0.83;
@@ -85,7 +83,6 @@ double traceLuggage(int hp1, int exp1, double m1, int e2)
             {
                 hp1 *= 1.1;
                 m1 -= 70;
-                usedMoney += 70;
                 if (m1 == 0)
                 {
                     hp1 *= 0.83;
@@ -97,7 +94,6 @@ double traceLuggage(int hp1, int exp1, double m1, int e2)
             if (exp1 < 400) 
             {
                 m1 -= 200;
-                usedMoney += 200;
                 if (m1 == 0)
                 {
                     hp1 *= 0.83;
@@ -109,7 +105,6 @@ double traceLuggage(int hp1, int exp1, double m1, int e2)
             else
             {
                 m1 -= 120;
-                usedMoney += 120;
                 if (m1 == 0)
                 {
                     hp1 *= 0.83;
@@ -122,7 +117,6 @@ double traceLuggage(int hp1, int exp1, double m1, int e2)
             if (exp1 < 300)
             {
                 m1 -= 100;
-                usedMoney += 100;
                 if (m1 == 0)
                 {
                     hp1 *= 0.83;
@@ -134,7 +128,6 @@ double traceLuggage(int hp1, int exp1, double m1, int e2)
             else
             {
                 m1 -= 120;
-                usedMoney += 120;
                 if (m1 == 0)
                 {
                     hp1 *= 0.83;
