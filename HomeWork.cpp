@@ -19,7 +19,7 @@ double percentageOfFindingLuggage(int exp1){
 double traceLuggage(int hp1, int exp1, double m1, int e2)
 {
     // 4.2.2
-    double p1;
+    double p2;
     if (e2 % 2 != 0)
     {
         double usedMoney = 0;
@@ -62,8 +62,8 @@ double traceLuggage(int hp1, int exp1, double m1, int e2)
         }
         hp1 *= 0.83;
         exp1 *= 1.17;
-        p1 = percentageOfFindingLuggage(exp1);
-        return p1;
+        p2 = percentageOfFindingLuggage(exp1);
+        return p2;
     }
     else
     {
@@ -75,8 +75,8 @@ double traceLuggage(int hp1, int exp1, double m1, int e2)
                 {
                     hp1 *= 0.83;
                     exp1 *= 1.17;
-                    p1 = percentageOfFindingLuggage(exp1);
-                    return p1;
+                    p2 = percentageOfFindingLuggage(exp1);
+                    return p2;
                 }   
             }
             else
@@ -87,8 +87,8 @@ double traceLuggage(int hp1, int exp1, double m1, int e2)
                 {
                     hp1 *= 0.83;
                     exp1 *= 1.17;
-                    p1 = percentageOfFindingLuggage(exp1);
-                    return p1;
+                    p2 = percentageOfFindingLuggage(exp1);
+                    return p2;
                 }   
             }
             if (exp1 < 400) 
@@ -98,8 +98,8 @@ double traceLuggage(int hp1, int exp1, double m1, int e2)
                 {
                     hp1 *= 0.83;
                     exp1 *= 1.17;
-                    p1 = percentageOfFindingLuggage(exp1);
-                    return p1;
+                    p2 = percentageOfFindingLuggage(exp1);
+                    return p2;
                 }   
             }
             else
@@ -109,8 +109,8 @@ double traceLuggage(int hp1, int exp1, double m1, int e2)
                 {
                     hp1 *= 0.83;
                     exp1 *= 1.17;
-                    p1 = percentageOfFindingLuggage(exp1);
-                    return p1;
+                    p2 = percentageOfFindingLuggage(exp1);
+                    return p2;
                 }   
             }
             exp1 *= 1.13;
@@ -121,8 +121,8 @@ double traceLuggage(int hp1, int exp1, double m1, int e2)
                 {
                     hp1 *= 0.83;
                     exp1 *= 1.17;
-                    p1 = percentageOfFindingLuggage(exp1);
-                    return p1;
+                    p2 = percentageOfFindingLuggage(exp1);
+                    return p2;
                 }   
             }
             else
@@ -132,12 +132,14 @@ double traceLuggage(int hp1, int exp1, double m1, int e2)
                 {
                     hp1 *= 0.83;
                     exp1 *= 1.17;
-                    p1 = percentageOfFindingLuggage(exp1);
-                    return p1;
+                    p2 = percentageOfFindingLuggage(exp1);
+                    return p2;
                 }   
             }
             exp1 *= 0.9;
     }
+    p2 = percentageOfFindingLuggage(exp1);
+    return p2;
     
 }
 
